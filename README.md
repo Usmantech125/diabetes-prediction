@@ -49,10 +49,9 @@ Used the following metrics to compare models:
 
 | Kernel | Accuracy | Precision | Recall | AUC |
 |--------|----------|-----------|--------|-----|
-| Linear | ✅       | ✅        | ✅     | ✅  |
-| RBF    | ✅       | ✅        | ✅     | ✅  |
+| Linear | 0.9589   | 0.9282    | 0.5825 | 0.9613 |
+| RBF    | 0.9609   | 0.9788    | 0.5718 | 0.9028 |
 
-> (Replace ✅ with actual metric values from your output)
 
 ---
 
@@ -62,9 +61,4 @@ This project demonstrates the application of SVM for binary classification probl
 
 ---
 
-## 🚀 Author
 
-**Usman Ghani**  
-Codveda Internship 2025  
-GitHub: [Your GitHub Link]  
-LinkedIn: [Your LinkedIn Profile]
