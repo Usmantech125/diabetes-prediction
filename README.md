@@ -1,64 +1,74 @@
-# 🧠 Diabetes Prediction using SVM
+# Diabetes Prediction using XGBoost
 
-This project is part of my internship with **Codveda**. The goal is to predict whether a patient is likely to have diabetes using Support Vector Machine (SVM) models based on medical and demographic data.
-
----
-
-## 📁 Dataset
-
-- File: `diabetes_prediction_dataset.csv`
-- Target Variable: `diabetes` (0 = No, 1 = Yes)
-- Features: age, gender, BMI, HbA1c level, blood glucose, hypertension, smoking history, etc.
+This is a self-initiated machine learning project focused on predicting the likelihood of diabetes using patient health data. The project leverages the power of the **XGBoost Classifier** to deliver strong predictive performance on a real-world dataset.
 
 ---
 
-## 🛠️ Tools & Technologies Used
+## 🧾 Objective
 
-- Python
-- pandas, NumPy
-- scikit-learn
-- SVM (Support Vector Machine)
-- StandardScaler
-- Performance Metrics: Accuracy, Precision, Recall, AUC
+- Load and clean the dataset
+- Handle categorical and numerical variables
+- Apply feature scaling
+- Train a predictive model using XGBoost
+- Evaluate using standard classification metrics
 
 ---
 
-## 🔧 Project Workflow
+## 📊 Dataset
 
-### 1. Data Preprocessing
-- One-hot encoded `smoking_history`
-- Label encoded `gender` (Male = 1, Female = 0)
-- Removed missing values
+The dataset includes the following features:
+
+- `age`, `gender`, `hypertension`, `heart_disease`
+- `smoking_history`, `bmi`, `HbA1c_level`, `blood_glucose_level`
+- Target variable: `diabetes` (binary: 0 or 1)
+
+---
+
+## 🧹 Preprocessing
+
+- Handled missing values in the gender column
+- Encoded categorical features using `get_dummies`
 - Scaled numerical features using `StandardScaler`
 
-### 2. Model Building
-- Implemented SVM with:
-  - Linear Kernel
-  - RBF Kernel
+---
 
-### 3. Evaluation
-Used the following metrics to compare models:
-- Accuracy
-- Precision
-- Recall
-- AUC (Area Under ROC Curve)
+## 🧠 Model
+
+- **Algorithm**: XGBoost Classifier
+- **Train/Test Split**: 80/20
+- **Input**: Scaled numerical and one-hot encoded features
 
 ---
 
-## 📈 Results
+## ✅ Performance
 
-| Kernel | Accuracy | Precision | Recall | AUC |
-|--------|----------|-----------|--------|-----|
-| Linear | 0.9589   | 0.9282    | 0.5825 | 0.9613 |
-| RBF    | 0.9609   | 0.9788    | 0.5718 | 0.9028 |
+| Metric     | Value   |
+|------------|---------|
+| Accuracy   | ~96.6%  |
+| Precision  | ~97.8%  |
+| Recall     | ~70.0%  |
+| ROC-AUC    | ~0.98   |
 
-
----
-
-## 📌 Conclusion
-
-This project demonstrates the application of SVM for binary classification problems in healthcare. Both linear and non-linear kernels were explored and evaluated for performance.
+The model shows strong accuracy, precision, recall and ROC-AUC  
 
 ---
 
+## 🧰 Libraries Used
 
+- `pandas`
+- `numpy`
+- `xgboost`
+- `sklearn`
+- `matplotlib` / `seaborn` 
+
+---
+
+## 📌 Notes
+
+This project was created as part of my personal learning journey in Machine Learning to deepen my skills with real-world datasets and XGBoost.
+
+---
+
+## 🚀 Tags
+
+`#MachineLearning` `#XGBoost` `#DiabetesPrediction` `#MLProjects`
